@@ -1,0 +1,204 @@
+
+/*共通樣式*/
+
+/*全部的margin padding都歸零 字體設定為黑體*/
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*超連結的底線去除*/
+a{
+    text-decoration: none;
+}
+
+/*共通 end*/
+
+
+/*最上方box*/
+
+.top-bar{
+    background:#44449d;
+    color:#fff;
+    padding: 10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/*滑鼠hover(滑入)時*/
+.top-bar:hover{
+    background:#34349d;
+}
+
+/*最上方box end*/
+
+
+/*navgation bar (nav-bar)*/
+
+/*控制nav區塊置中並限制寬度*/
+.nav-zone{
+    max-width:1080px;
+    /* 
+        margin: 10px;
+        上下左右都是10px
+    
+        margin: 10px 20px;
+        上下10px 左右 20px
+    
+        margin: 10px 20px 30px;
+        上 10px 左右 20px 下 30px
+    
+        margin: 10px 20px 30px 40px;
+        上 10px 右 20px 下 30px 左 40px
+        (相當於順時針繞一圈)
+    
+    */
+    margin:0 auto;
+}
+
+/*左邊選單靠左*/
+.left-container{
+    float: left;
+}
+
+/*右邊選單靠右*/
+.right-container{
+    float: right;
+}
+
+/*把list-style(li前面的點點)去掉*/
+.nav-box{
+    list-style: none;
+}
+
+/*設定nav-box裡的li樣式*/
+.nav-box li{
+    display: inline-block;
+    color: #463265; 
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 18px;   
+}
+
+.nav-box li:hover{
+    background: #ccc; 
+}
+
+/*nav-bar end*/
+
+
+/*main-view*/
+
+/*設定整體區塊底色以及將前面的float清除*/
+.main-section{
+    background: #6f5499;
+    padding: 100px;
+    clear:both;
+}
+
+/*控制中央範圍並置中*/
+.main-zone{
+    max-width:800px;
+    margin: 0 auto;
+}
+
+/*設定B的sytle */
+.b-box{
+    font-size: 64px;
+    height: 150px;
+    width: 150px;
+    /* dipslay 一定要是table才可以用margin auto */
+    display: table;
+    margin: 0 auto;
+    line-height: 150px;
+    color: #fff;
+    /* border: 框的樣式 框的粗細 框的顏色 */
+    border:solid 1px #fff;
+    /* 圓角強度也可以用% 比如說100%就是圓形 */
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* main-slogan的樣式 */
+h1{
+    font-size: 28px;
+    color: #fff;
+    margin: 50px auto;
+    text-align: center;
+    
+    line-height: 1.5em;
+    /*字與字間的寬度*/
+    letter-spacing: 0.5px;
+    font-weight: normal;
+}
+
+/* 下載btn樣式 */
+.download-box{
+    padding: 17px;
+    display: table;
+    margin: 0 auto;
+    font-size: 21px;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 5px;
+}
+
+.darken-text-box {
+    text-align:center;
+    margin:20px 0 45px;
+    color:#ccc;
+}
+
+/*最難的部分*/
+
+/*
+    設定最外層容器，注意高跟寬不用設定
+    讓內容去稱開，但要記得設定好padding與postion
+*/
+.extreme-container {
+    margin:0 auto;
+    display:table;
+    padding:20px;
+    position:relative;
+    border: solid 1px #fff;
+}
+
+/* 
+    因為圖片比例是固定的比較好掌握(字有時多有時少)所以選擇把它變absolute
+    設定好寬度(這樣隔壁的div才知道margin是多少)
+    之後把position設為absolute top/left設為上一層的padding值
+*/
+.img-box{
+    width:140px;
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+/* 把img-box裡的圖片寬度設為100% */
+.img-box img{
+    width: 100%;
+}
+
+/* 
+    文字方塊則設定他的最大寬度，文字超過會自己換行
+    margin-left則設定圖片的寬度再多一點點
+    這樣不論文字多少上一層都會自動符合正確的尺寸
+*/
+.text-box {
+    max-width:200px; 
+    margin-left:155px;
+    /*顏色設定 child div 會自動繼承*/
+    color: #fff;
+}
+
+/*小註解顏色不同另外設定*/
+.darken-text {
+    padding: 5px 0px;
+    color: #aaa;
+}
+
+.text-box1 {
+    background-color:#34349d;
+}
